@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f1ff;
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+hr{
+    border: .5px solid #d1d1d1;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.sec-title{
+    color: #562eff;
+    font-size: 24px;
+    margin-top: 3px;
+}
+.container{
+    background-color: #ffffff;
+    width: 870px;
+    padding: 30px ;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap:30px;
+}
+.player{
+    display: flex;
+    align-items: center;
+}
+.player img{
+    width: 56px;
+    height: 56px;
+}
+.player-name{
+    margin-left: 16px;
+}
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+}
+.blog{
+    display: flex;
+}
+.blog .thumbnaail img{
+    width: 177px;
+    height: 117px;
+
+}
+.blog-info{
+    margin-left:16px ;
+}
+.blog title{
+    font-size: 20px;
+}
+.blog-author{
+    color: #979797;
+    font-size: 16px;
+}
+.blog-author a{
+    color: #562eff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-column-gap:24px ;
+}
+.course{
+    width: 252px;
+    height: 280px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 3px 5px -3px rgb(211, 209, 209);
+    border-radius: 5px;
+}
+.course .course-banner img{
+    width: 224px;
+    height: 104px;
+}
+.filled{
+    color:#FFC014 ;
+}
+
+.unfilled{
+    color: #aeaeae;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.course-duration{
+    background-color: rgb(255, 158, 158);
+    color: red;
+    border-radius: 20px;
+    padding: 3px 7px;
+}
+
+
+
+/*......... media quaries............. */
+
+@media only screen and (max-width:688px) {
+    .container,.course{
+       max-width: 280px;
+        
+    }
+    
+    .players , .blogs , .courses{
+        
+        grid-template-columns: repeat(1 ,1fr);
+      
+    } 
+    .player, .blogs , .courses{
+        flex-direction: column;
+        
+    } 
+    .course{
+       margin-bottom: 20px;
+    }
+     
+    
+}
+@media only screen and (min-width:688px) and (max-width:990px)  {
+    .container{
+        width: 80%;
+
+    }
+    .players,.courses{
+        grid-template-columns: repeat(2 , 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    .course{
+       margin-bottom: 20px;
+    }
+    .blogs{
+        grid-template-columns: repeat(1 , 1fr); 
+        
+    }
+}
